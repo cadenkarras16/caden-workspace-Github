@@ -36,6 +36,9 @@ class PortfoliosController < ApplicationController
       end
     end
   end
+  def show
+       @portfolio_item = Portfolio.find(params[:id])
+  end
   
    def create
     @blog = Blog.new(blog_params)
