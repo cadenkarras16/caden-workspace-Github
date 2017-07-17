@@ -1,3 +1,4 @@
+nes (18 sloc)  577 Bytes
 <!DOCTYPE html>
 <html>
   <head>
@@ -14,14 +15,12 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
-    <%= login_helper %>  
+    <%= login_helper %>
 
     <%= yield %>
-    
-     <%= render "shared/nav", location: 'bottom' %>
 
-    <% if session[:source] %>
-      <p>Thanks for visiting me from <%= session[:source] %></p>
-    <% end %>
+    <%= render "shared/nav", location: 'bottom' %>
+
+    <%= source_helper("blog") %>
   </body>
 </html>
